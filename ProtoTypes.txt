@@ -1,0 +1,25 @@
+Every object in Javascript has a prototype. When a messages reaches an object, JavaScript will attempt to find a property in that object first, if it cannot find it then the message will be sent to the object’s prototype and so on. This works just like single parent inheritance in a class based language.
+
+
+
+
+var alien = {
+  kind: 'alien'
+}
+
+// and a person object
+var person = {
+  kind: 'person'
+}
+
+// and an object called 'zack'
+var zack = {};
+
+// assign alien as the prototype of zack
+zack.__proto__ = alien;
+
+var simran = {};
+
+simran.__proto__ = zack
+
+console.log(simran.kind);/// it will out put as 'alien'

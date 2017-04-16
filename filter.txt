@@ -1,0 +1,17 @@
+// Filter
+
+// When we want some subset of our data
+
+var products = [
+  
+  {name: 'simran', type: 'fruit'},
+  {name: 'Harman', type: 'vegi'},
+  {name: 'baljinder', type: 'vegi'} 
+
+];
+
+var sample = products.filter((product) => {
+		return product.type === 'fruit'
+});
+
+sample

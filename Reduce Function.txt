@@ -1,0 +1,66 @@
+// In Recuce , actually we are condencing down array into single element
+// condencing or reducing is same may b....
+var arrays = [1, 2, 3, 4, 5];
+
+var s = arrays.reduce((sum, number) => {
+  return sum + number;
+}, 0);
+
+// This second argument specify starting i.e inetial value;
+
+
+console.log(s);
+
+
+**********************************************************************
+
+
+var primaryColors = [ {color: 'Red'}, {color: 'Yellow'}, {color: 'blue'} ];
+
+var arr = primaryColors.reduce((prev, primaryColor) => {
+    prev.push(primaryColor.color);
+    return prev;
+  
+}, []);
+console.log(arr);
+
+*************************************************************************// Balance paranthesis Problem
+var IsBalanced = ((string) => {
+  
+  return !string.split("").reduce((prev, char) => {
+    if(prev < 0) return prev;
+    if(char === '(') return ++prev;
+    if(char === ')') return --prev;
+  }, 0)
+  
+})
+
+console.log(IsBalanced('()()()()'));
+
+*********************************************************************
+var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+
+var deskTypes = desks.reduce(function(pos, desk) {
+    
+    if(desk.type === 'sitting')
+    {
+        pos.sitting++;
+    }
+    
+    if(desk.type === 'standing')
+    {
+        pos.standing++;
+    }
+    
+    return pos;
+    
+}, { sitting: 0, standing: 0 });
+
+
+console.log(deskTypes);

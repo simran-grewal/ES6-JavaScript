@@ -1,0 +1,41 @@
+// find in ES6
+
+var users = [
+  {name : `simran`},
+  {name: `harman`},
+  {name: `manjit`}
+  ];
+  
+var user  = users.find((user) => {
+      return user.name === 'simran';
+  });
+  
+console.log(user);
+  
+
+
+***************************************
+
+
+function add(model){
+    
+   this.model = model;
+    
+}
+
+var cars = [
+  new add('mruti'),
+  new add('mango'),
+  new add('bus')
+  
+  ];
+
+var res = cars.find((car) => {
+  
+    return car.model = 'bus';
+});
+
+console.log(res);
+
+console.log(cars[0].model);
+

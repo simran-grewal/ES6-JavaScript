@@ -1,0 +1,54 @@
+//ES6 Classes-----------
+
+class Car {
+  
+  constructor({title}){
+    this.title = title;
+    console.log(title)
+  }
+  drive(){
+    return 'Vroom';
+  }
+}
+
+const car = new Car({title : 'Toyota'});
+console.log(car.drive());
+
+
+//// extends classes in ES6 javascript---------------------
+
+//ES6 Classes-----------
+
+class Car {
+  
+  
+  constructor({title}){
+    this.title = title;
+    console.log(this.title)
+  }
+  
+  
+  drive(){
+    return 'Vroom';
+  }
+  
+  
+}
+
+class Toyota extends Car{
+  
+  constructor(option){
+     super(option); // calling Car class construcor
+    this.color = option.color;
+  }
+  
+ 
+  honk(){
+    return 'beep';
+  }
+}
+
+const toyota = new Toyota({color : 'Red', title : 'Daily driver'});
+toyota.honk();
+toyota.drive();
+console.log(toyota);

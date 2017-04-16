@@ -1,0 +1,14 @@
+// Every********************
+// take as 24 && 4 && 32
+var Computers = [
+    {name: 'Apple', ram: 24},
+    {name: 'Compaq', ram: 4},
+    {name: 'acer', ram: 32}
+  ];
+  
+
+var every = Computers.every(computer => computer.ram >= 4);
+console.log(every); // true
+
+every = Computers.every(computer => computer.ram > 16);
+console.log(every); // true

@@ -1,0 +1,33 @@
+
+var sum = (a, b, c = 12) =>{
+  
+  return a + b + c;
+}
+
+
+console.log(sum(2, 3, 5));
+console.log(sum(2, 3));
+console.log(sum(2, 5, null));
+
+**********************************************************************************************
+
+
+
+var User = function(id){
+  this.id = id;
+}
+
+var generateId = () =>{
+  return Math.random() * 9999999;
+}
+
+var createAdminUser = (user = new User(generateId())) => {
+  
+  user.admin = true;
+  
+  return user;
+}
+
+
+console.log(createAdminUser());
+

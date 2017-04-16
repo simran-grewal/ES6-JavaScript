@@ -1,0 +1,96 @@
+var name = {
+  "firstName": 'simran',
+  "lastName": 'Grewal'
+}
+
+const {firstName, lastName} = name;
+console.log(firstName);
+console.log(lastName);
+
+
+********************************************************************************************
+var name = {
+  "firstName" : "simran",
+  "lastName" : "Grewal",
+  "middleName": "Singh"
+}
+
+var display = ({firstName, lastName, middleName}, {color}) => {
+  console.log(`My name is ${firstName} ${middleName} ${lastName} and love ${color} color`)
+}
+
+display(name, {color: 'RED'});
+
+**********Destructuring  array********************
+const Companies = [
+  'Google', 
+  'FaceBook',
+  'Uber'
+  ];
+  
+const [name1, name2, name3] = Companies;
+console.log( name1 + ' ' + name2 + ' ' + name3);
+
+********************************************************************************************
+const Companies = [
+  'Google', 
+  'FaceBook',
+  'Uber'
+  ];
+  
+const [name1, ...arr] = Companies;
+console.log(arr);
+************************Object Inside array Destructuring***********************
+const Companies = [
+{ name:  'Google', Location: 'Punjab' },
+{ name: 'FaceBook', Location: 'Hoshiarpur' },
+{ name:  'Uber', Location: 'chandigarh' }
+  
+  
+  ];
+  
+const [{Location}] = Companies;
+
+console.log(Location);
+
+************Array Inside Object Destructure*******************
+const Companies = {
+  
+    Locations: ['Punjab', 'Hoshiarpur', 'Chandigarh']
+  
+  };
+  
+const {Locations: [location]} = Companies;
+
+console.log(location);
+
+**********Practicle Use of Destructuring******************
+var SignUp = ({fName, lName, uName, Password}) => {
+  
+  console.log(fName + ' ' + lName + ' ' + uName + ' ' + Password);
+}
+
+const User = {
+  
+  uName: 'simran@gmail.com',
+  Password: '*********',
+  lName: 'simuu',
+  fName: 'grewal'
+}
+
+SignUp(User);
+
+
+**********************************************************************
+var points = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+  ];
+  
+var res = points.map(([x, y]) => {
+  
+  return  {x , y};
+});
+
+console.log(res);

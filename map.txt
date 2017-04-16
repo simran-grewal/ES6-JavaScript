@@ -1,0 +1,16 @@
+var numbers = [1, 2, 3, 4, 5];
+
+// if want to store the 2 * element in another array then we can use map i.e
+
+
+var double = numbers.map((number) => {
+		return 2 * number;
+});
+
+double;
+
+// map is used when we want to modify records in some list of data
+
+// practical application is in post request to render the list of something
+
+

@@ -1,0 +1,12 @@
+// it will take as 24 || 4 || 32
+var Computers = [
+    {name: 'Apple', ram: 24},
+    {name: 'Compaq', ram: 4},
+    {name: 'acer', ram: 32}
+  ];
+  
+
+var some = Computers.some(computer => computer.ram > 16);
+console.log(some); // true
+
+

@@ -1,0 +1,27 @@
+var arr = [10, 5, 3, 1, 1, 4, 5, 4, 5, 2, 1, 2, 2, 2, 5, 5];
+
+var map = {};
+
+for(var i = 0; i < arr.length; i++)
+{
+  var value = arr[i];
+  
+      if(map[value] == undefined){
+        map[value] = 1;
+      }else{
+        var prev = map[value];
+        map[value] = prev + 1;
+      }
+}
+var max = Number.MIN_VALUE;
+var value;
+for(key in map){
+  
+  if(max < map[key]){
+    value = key;
+    max = map[key];
+  }
+}
+
+console.log(value + " and Count=" + max);
+
